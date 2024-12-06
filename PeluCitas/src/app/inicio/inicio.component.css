@@ -1,0 +1,272 @@
+.home-container {
+  margin-top: 50px;
+  text-align: center;
+  padding: 40px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  filter: blur(5px);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+.overlay h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-reservar {
+  background-color: #d4af37;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-reservar:hover {
+  background-color: #c49c29;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Servicios con fondo blanco */
+.servicios {
+  max-width: 1000px; /* Ancho ajustado */
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombras ligeras */
+  color: #333; /* Texto oscuro */
+  font-family: 'Georgia', serif; /* Fuente elegante */
+}
+
+.servicios h1 {
+  text-align: center;
+  color: #333; /* Color oscuro para el título */
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-family: 'Georgia', serif; /* Fuente elegante */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.categoria h2 {
+  color: #333; /* Color oscuro para los subtítulos */
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #d4af37; /* Línea dorada en lugar de blanca */
+  padding-bottom: 8px;
+}
+
+.servicio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 1rem; /* Tamaño ajustado */
+}
+
+.servicio p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333; /* Color oscuro */
+}
+
+.servicio p.descripcion {
+  display: none; /* Ocultar descripciones */
+}
+
+.servicio strong {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.servicio span {
+  font-size: 1rem; /* Tamaño ajustado */
+  color: #d4af37; /* Color dorado */
+}
+
+.servicio:hover {
+  color: #d4af37; /* Hover en dorado */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Estilos generales para la sección de horarios y contacto */
+.horarios-container {
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1000px; /* Ajusta el ancho máximo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horarios-row {
+  display: flex;
+  gap: 20px; /* Espaciado entre columnas */
+  justify-content: center;
+  flex-wrap: wrap; /* Para que sea responsivo */
+}
+
+.horarios-content {
+  background-color: #aa8d59;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px; /* Todos tendrán el mismo ancho */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.icono-horario img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.horarios-content h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn-horarios {
+  background-color: #fff;
+  color: #aa8d59;
+  border: 2px solid #aa8d59;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-horarios:hover {
+  background-color: #000000;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  /* Ajustar la altura de la imagen en pantallas pequeñas */
+  .image-container img {
+    height: 500px;
+  }
+
+  /* Reducir el tamaño del título en la superposición */
+  .overlay h1 {
+    font-size: 30px;
+  }
+
+  /* Cambiar tamaño de botón */
+  .btn-reservar {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  /* Ajustar el padding en la sección de servicios */
+  .servicios {
+    padding: 15px;
+  }
+
+  /* Reducir tamaño del título de categoría */
+  .categoria h2 {
+    font-size: 18px;
+  }
+
+  /* Hacer los servicios en columna para pantallas pequeñas */
+  .servicio {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .servicio span {
+    align-self: flex-end;
+  }
+
+  /* Responsivo para la sección de horarios y contacto */
+  .horarios-container {
+    padding: 30px 10px; /* Reducir padding */
+  }
+
+  .horarios-row {
+    flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+    align-items: center;
+    gap: 10px; /* Reducir espacio entre los elementos */
+  }
+
+  .horarios-content {
+    width: 100%; /* Hacer cada item de contacto al 100% del contenedor */
+    max-width: 350px; /* Limitar el ancho máximo */
+  }
+
+  /* Ajustar el tamaño de los botones */
+  .btn-horarios {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  /* Ajustar tamaño del ícono */
+  .icono-horario img {
+    width: 40px;
+  }
+
+  .horarios-content h2 {
+    font-size: 18px; /* Reducir tamaño de texto */
+  }
+}
+
+/* Título de contacto (igual que en servicios) */
+.text-center {
+  font-family: 'Georgia', serif; /* Usar la misma fuente elegante */
+  text-align: center;
+  color: #333; /* Color oscuro para el título */
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+iframe {
+  width: 1000px;
+  height: 500px;
+}
+@media screen and (max-width: 768px) {
+  iframe {
+    width: 300px;
+    height: 500px;
+  }
+}

@@ -1,0 +1,62 @@
+/* Estilos generales para la sección Sobre Nosotros */
+.about-us {
+    margin-top: 100px;
+    padding: 50px 20px; /* Espaciado alrededor de la sección */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .about-container {
+    max-width: 800px; /* Limitar el ancho para que no se vea demasiado ancho */
+    text-align: center; /* Centrar el texto */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 40px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .about-container h2 {
+    font-size: 36px;
+    color: #333333; /* Color del título */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .about-container p {
+    font-size: 18px;
+    color: #666666; /* Texto gris oscuro */
+    line-height: 1.6; /* Aumentar el espacio entre las líneas */
+    margin-bottom: 20px;
+  }
+  
+  .about-container p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  /* Agregar un toque de color al final con un borde inferior */
+  .about-container::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: #4caf50; /* Color verde */
+    margin: 20px auto 0;
+  }
+  
+  /* Estilos responsivos */
+  @media screen and (max-width: 768px) {
+    .about-container {
+      padding: 30px;
+    }
+  
+    .about-container h2 {
+      font-size: 28px;
+    }
+  
+    .about-container p {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,0 +1,30 @@
+<html>
+
+<body>
+  <header class="navbar">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container">
+      <h1 class="logo">PeluCitas</h1>
+      <nav class="navigation">
+        <!-- Menú -->
+        <ul class="nav-list" [ngClass]="{'active': isMenuOpen}">
+          <li><a class="nav-link" routerLink="/inicio">Inicio</a></li>
+          <li><a class="nav-link" routerLink="/sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a class="nav-link" routerLink="/reservas">Reservar</a></li>
+          <li><a class="nav-link" routerLink="/login" routerLinkActive="active"
+              ariaCurrentWhenActive="page">Iniciar Sesión</a></li>
+          <li><a class="nav-link logout" routerLink="/cerrar-sesion" style="display: none;">Cerrar Sesión</a></li>
+        </ul>
+      </nav>
+
+      <!-- Icono de hamburguesa, solo visible cuando el menú está cerrado -->
+      <div class="hamburger" (click)="toggleMenu()" *ngIf="!isMenuOpen">&#9776;</div>
+
+      <!-- Icono de "X", solo visible cuando el menú está abierto -->
+      <div class="close-menu" *ngIf="isMenuOpen" (click)="toggleMenu()">&#10006;</div>
+    </div>
+  </header>
+</body>
+</html>
+<router-outlet></router-outlet>
